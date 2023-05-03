@@ -1,6 +1,6 @@
 {
   "manifest_version": 2,
-  "name": "Brave Search in Firefox",
+  "name": "Brave Search Engine and Keyword",
   "version": "1.0",
   "description": "Adds Brave Search to Firefox and includes @brave as keyword.",
   "chrome_settings_overrides": {
@@ -15,5 +15,5 @@
   "icons": {
     "48": "icons/logo-48x48.png",
     "96": "icons/logo-96x96.png"
-  },
+  }
 }
