@@ -17,3 +17,7 @@
 <img src="https://img.shields.io/amo/users/{53c0f15a-a430-4d4f-ac91-caed0d516155}?style=for-the-badge" />
 <img src="https://img.shields.io/github/license/datastring/firefox-telegram-in-sidebar?style=for-the-badge" />
 </p>
+
+## Disclaimer
+
+This extension is an independent project, has no relationship, and is not affiliated to Brave in any way. Brave™ is a registered trademark of Brave Software, Inc.
