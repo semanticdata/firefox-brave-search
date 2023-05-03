@@ -1,0 +1,19 @@
+{
+  "manifest_version": 2,
+  "name": "Brave Search in Firefox",
+  "version": "1.0",
+  "description": "Adds Brave Search to Firefox and includes @brave as keyword.",
+  "chrome_settings_overrides": {
+    "search_provider": {
+      "name": "Brave",
+      "search_url": "https://search.brave.com/search?q={searchTerms}",
+      "suggest_url": "https://search.brave.com/api/suggest?q={searchTerms}",
+      "favicon_url": "https://brave.com/static-assets/images/brave-favicon.png",
+      "keyword": "@brave"
+    }
+  },
+  "icons": {
+    "48": "icons/logo-48x48.png",
+    "96": "icons/logo-96x96.png"
+  },
+}
