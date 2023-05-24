@@ -8,7 +8,7 @@
 <img src="https://img.shields.io/github/license/datastring/firefox-telegram-in-sidebar?style=for-the-badge" />
 </p>
 
-<p align=center>Firefox WebExtension that adds Brave Search as Search Engine option. Also includes @brave as a Search Shortcut.</p>
+<p align=center>Firefox WebExtension adding Brave Search as search engine option within Firefox. Also includes keyword @brave as a Search Shortcut.</p>
 
 ## Disclaimer
 
