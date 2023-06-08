@@ -1,4 +1,4 @@
-<h1 align=center><img src="/icons/96x96.png" /> Brave Search Engine and Keywords</h1>
+<h1 align=center> Brave Search Engine and Keywords</h1>
 
 <p align=center>
 <img alt="Mozilla Add-on" src="https://img.shields.io/amo/v/{53c0f15a-a430-4d4f-ac91-caed0d516155}?style=for-the-badge">
