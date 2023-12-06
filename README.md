@@ -8,15 +8,21 @@
 
 # Brave Search Engine and Keywords
 
-Firefox Extension adds Brave Search to Firefox and includes `@brave`, `!brave`, `@b`, and `!b` as search keywords.
-This allows you to easily search brave in multiple new ways.
+Firefox extension adds Brave Search to Firefox and includes `@brave`, `!brave`, `@b`, and `!b` as search keywords. This allows you to easily search brave in multiple new ways.
 
-Example: `!b !w Hello World` would let you search Wikipedia directly from any website regardless or wether or not you set Brave as your default search provider.
+### Examples
+
+- `!b !w Hello World` would let you search Wikipedia directly from any website regardless or wether or not you set Brave as your default search provider.
+- `!gh Zola themes` would let you search GitHub directly while having this extension enabled.
 
 ## Disclaimer
 
 This extension is an independent project, has no relationship, and is not affiliated to Brave in any way. Brave™ is a registered trademark of Brave Software, Inc.
 
-## Credits
+## Acknowledgments
 
 Special thanks to [maaa](https://github.com/maaa101/) for inspiring this extension.
+
+## License
+
+Source code in this repository is available under the [MIT](LICENSE) license. You are free to use this code however you see fit. That said, some acknowledgement would be well received.
