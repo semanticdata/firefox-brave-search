@@ -6,7 +6,12 @@
 <img src="https://img.shields.io/github/license/semanticdata/firefox-brave-search" />
 </p>
 
-# Brave Search Engine and Keywords
+<!-- # Brave Search Engine and Keywords -->
+
+<h1>
+<img alt="Brave logo" src="icons/96x96.png" width="28" />
+Brave Search Engine and Keywords
+</h1>
 
 Firefox extension adds Brave Search to Firefox and includes `@brave`, `!brave`, `@b`, and `!b` as search keywords. This allows you to easily search brave in multiple new ways.
 
@@ -18,10 +23,6 @@ Firefox extension adds Brave Search to Firefox and includes `@brave`, `!brave`, 
 ## Disclaimer
 
 This extension is an independent project, has no relationship, and is not affiliated to Brave in any way. Brave™ is a registered trademark of Brave Software, Inc.
-
-## Acknowledgments
-
-Special thanks to [maaa](https://github.com/maaa101/) for inspiring this extension.
 
 ## License
 
