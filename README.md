@@ -20,4 +20,4 @@ This extension is an independent project, has no relationship, and is not affili
 
 ## License
 
-Source code in this repository is available under the [MIT](LICENSE) license. You are free to use this code however you see fit. That said, some acknowledgement would be well received.
+Source code in this repository is available under the [MIT License](LICENSE).
