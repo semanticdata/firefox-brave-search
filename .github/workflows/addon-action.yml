@@ -1,4 +1,4 @@
-name: Publish Firefox Addon (new version)
+name: Publish Firefox Addon (yayuyokitano/firefox-addon)
 
 on:
   workflow_dispatch:
@@ -18,7 +18,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - uses: yayuyokitano/firefox-addon@v0
+      - uses: yayuyokitano/firefox-addon@v0.0.6-alpha
         with:
           api_key: ${{ secrets.FIREFOX_JWT_ISSUER }}
           api_secret: ${{ secrets.FIREFOX_JWT_SECRET }}
