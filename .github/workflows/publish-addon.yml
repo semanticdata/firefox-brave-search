@@ -5,26 +5,30 @@ on:
   # push:
   #   branches: [main]
 
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
 jobs:
   publish:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
           name: artifact
-          path: firefox-brave-search.zip
-
-  build:
-    needs: publish
-    runs-on: ubuntu-latest
-    steps:
-      - uses: wdzeng/firefox-addon@v1
+          path: public
+      - name: Publish
+        uses: wdzeng/firefox-addon@v1
         with:
           # addon-guid: "{53c0f15a-a430-4d4f-ac91-caed0d516155}"
-          xpi-path: firefox-brave-search.zip
+          # xpi-path: firefox-brave-search.zip
+          xpi-path: public
           self-hosted: false
           addon-guid: ${{ secrets.FIREFOX_EXTENSION_ID }}
           jwt-issuer: ${{ secrets.FIREFOX_JWT_ISSUER }}
