@@ -21,8 +21,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
-          name: firefox-addon
-          # path: result.zip
+          path: result.zip
 
   publish:
     needs: zip-files
@@ -34,7 +33,7 @@ jobs:
           api_key: ${{ secrets.FIREFOX_JWT_ISSUER }}
           api_secret: ${{ secrets.FIREFOX_JWT_SECRET }}
           guid: ${{ secrets.FIREFOX_EXTENSION_ID }}
-          xpi_path: firefox-addon.zip
-          # xpi_path: result.zip
+          xpi_path: result.zip
+          # xpi_path: firefox-addon.zip
           # xpi_path: firefox-brave-search.zip
           # src_path: firefox-brave-search-src.zip # Optional
