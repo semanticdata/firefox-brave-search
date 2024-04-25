@@ -10,7 +10,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: cardinalby/export-env-action@v1
+      - uses: cardinalby/export-env-action@v2
         with:
           envFile: "./.github/workflows/constants.env"
           expand: true
@@ -22,7 +22,7 @@ jobs:
 
       - name: Deploy to Firefox Addons
         id: addonsDeploy
-        uses: cardinalby/webext-buildtools-firefox-addons-action@v1
+        uses: cardinalby/webext-buildtools-firefox-addons-action@v2
         continue-on-error: true
         with:
           zipFilePath: ${{ env.ZIP_FILE_PATH }}

@@ -15,9 +15,9 @@ jobs:
         ${{ steps.getZipAssetId.outputs.result || 
             steps.uploadZipAsset.outputs.id }}
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
 
-      - uses: cardinalby/export-env-action@v1
+      - uses: cardinalby/export-env-action@v2
         with:
           envFile: "./.github/workflows/constants.env"
           expand: true
@@ -55,7 +55,7 @@ jobs:
     needs: ensure-zip
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - uses: cardinalby/export-env-action@v1
         with:
           envFile: "./.github/workflows/constants.env"
