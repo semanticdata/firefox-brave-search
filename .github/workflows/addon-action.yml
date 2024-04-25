@@ -11,17 +11,29 @@ permissions:
   id-token: write
 
 jobs:
+  zip-files:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Zip files
+        uses: vimtor/action-zip@v1.2
+        with:
+          files: manifest.json icons/
+          dest: result.zip
+
   publish:
+    needs: zip-files
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - uses: yayuyokitano/firefox-addon@v0.0.6-alpha
+      - name: Publish
+        uses: yayuyokitano/firefox-addon@v0.0.6-alpha
         with:
           api_key: ${{ secrets.FIREFOX_JWT_ISSUER }}
           api_secret: ${{ secrets.FIREFOX_JWT_SECRET }}
           guid: ${{ secrets.FIREFOX_EXTENSION_ID }}
-          xpi_path: firefox-brave-search.zip
+          xpi_path: result.zip
+          # xpi_path: firefox-brave-search.zip
           # src_path: firefox-brave-search-src.zip # Optional
