@@ -20,7 +20,7 @@ jobs:
         uses: kewisch/action-web-ext@v1
         with:
           cmd: build
-          source: src
+          # source: src
           filename: "{name}-{version}.xpi"
           ignoreFiles: '[ "package.json","package-lock.json","yarn.lock", ".github", ".gitattributes", "LICENSE", "README.md" ]'
 
