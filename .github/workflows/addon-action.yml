@@ -6,10 +6,10 @@ on:
     types: [published] # Trigger when a new release is published
 
 jobs:
-  zip-files:
+  prepare-and-publish:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout # Checkout the repository
+      - name: Checkout
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
@@ -22,13 +22,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
-          path: ${{ github.workspace }}/result.zip
-          # path: result.zip
-
-  publish:
-    needs: zip-files
-    runs-on: ubuntu-latest
-    steps:
+          path: result.zip
       - name: Publish
         uses: yayuyokitano/firefox-addon@v0.0.6-alpha
         with:
