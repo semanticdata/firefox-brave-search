@@ -23,6 +23,5 @@ jobs:
           api_key: ${{ secrets.FIREFOX_JWT_ISSUER }}
           api_secret: ${{ secrets.FIREFOX_JWT_SECRET }}
           guid: ${{ secrets.FIREFOX_EXTENSION_ID }}
-          xpi_path: brave-search-firefox.zip
-          # src_path: brave-search-src.zip # Optional
-          # src_path: firefox-brave-search # Optional
+          xpi_path: firefox-brave-search.zip
+          # src_path: firefox-brave-search-src.zip # Optional
