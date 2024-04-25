@@ -2,10 +2,11 @@ name: "Release"
 
 on:
   workflow_dispatch:
-  # pull_request:
-  # push:
-  #   branches:
-  #     - main
+  push:
+    tags:
+      - "v*.*.*"
+  release:
+    types: [published]
 
 jobs:
   build:
@@ -34,8 +35,6 @@ jobs:
           source: ${{ steps.web-ext-build.outputs.target }}
           apiKey: ${{ secrets.FIREFOX_JWT_ISSUER }}
           apiSecret: ${{ secrets.FIREFOX_JWT_SECRET }}
-          # apiKey: ${{ secrets.AMO_SIGN_KEY }}
-          # apiSecret: ${{ secrets.AMO_SIGN_SECRET }}
           timeout: 900000
 
       # - name: "Upload Artifact"
@@ -45,7 +44,7 @@ jobs:
       #     path: ${{ steps.web-ext-build.outputs.target }}
 
       - name: "Create Release"
-        uses: softprops/action-gh-release@v1 # v2
+        uses: softprops/action-gh-release@v2
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
