@@ -18,6 +18,11 @@ jobs:
         with:
           files: manifest.json icons/
           dest: result.zip
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: firefox-addon
+          path: result.zip
 
   publish:
     needs: zip-files
