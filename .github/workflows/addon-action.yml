@@ -17,11 +17,13 @@ jobs:
         uses: vimtor/action-zip@v1.2
         with:
           files: manifest.json icons/
+          recursive: false
           dest: result.zip
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
-          path: result.zip
+          path: ${{ github.workspace }}/result.zip
+          # path: result.zip
 
   publish:
     needs: zip-files
