@@ -14,10 +14,13 @@ jobs:
         with:
           fetch-depth: 0 # Fetch all history for git info
 
+      - name: Archive
+        run: git archive --output=archive.zip HEAD --prefix=icons/ --manifest=manifest.json
+
       - name: Upload artifact
         uses: actions/upload-artifact@v4
-        # with:
-        #   path: artifact
+        with:
+          path: archive.zip
 
       # - name: Zip files
       #   uses: vimtor/action-zip@v1.2
