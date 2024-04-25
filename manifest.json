@@ -16,5 +16,11 @@
   "icons": {
     "96": "icons/96x96.png",
     "512": "icons/512x512.png"
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "{53c0f15a-a430-4d4f-ac91-caed0d516155}",
+      "strict_min_version": "100.0"
+    }
   }
 }
