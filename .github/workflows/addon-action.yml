@@ -19,10 +19,10 @@ jobs:
           files: manifest.json icons/
           recursive: false
           dest: result.zip
-      - name: Upload artifact
-        uses: actions/upload-artifact@v4
-        with:
-          path: result.zip
+      # - name: Upload artifact
+      #   uses: actions/upload-artifact@v4
+      #   with:
+      #     path: result.zip
       - name: Publish
         uses: yayuyokitano/firefox-addon@v0.0.6-alpha
         with:
@@ -30,6 +30,4 @@ jobs:
           api_secret: ${{ secrets.FIREFOX_JWT_SECRET }}
           guid: ${{ secrets.FIREFOX_EXTENSION_ID }}
           xpi_path: result.zip
-          # xpi_path: firefox-addon.zip
-          # xpi_path: firefox-brave-search.zip
           # src_path: firefox-brave-search-src.zip # Optional
