@@ -15,7 +15,8 @@ jobs:
           fetch-depth: 0 # Fetch all history for git info
 
       - name: Archive
-        run: git archive --output=archive.zip HEAD --prefix=icons/ --manifest=manifest.json
+        run: git archive --output=archive.zip HEAD --prefix=icons/ manifest.json
+        # run: git archive --output=archive.zip HEAD --prefix=icons/ manifest.json
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
