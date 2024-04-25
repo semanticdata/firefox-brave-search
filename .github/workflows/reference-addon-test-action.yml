@@ -2,8 +2,8 @@ name: Reference Workflow (git archive)
 
 on:
   workflow_dispatch: # Trigger workflow manually
-  release:
-    types: [published] # Trigger when a new release is published
+  # release:
+  #   types: [published] # Trigger when a new release is published
 
 jobs:
   prepare-and-publish:
