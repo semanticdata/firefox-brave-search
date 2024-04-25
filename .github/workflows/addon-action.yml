@@ -1,0 +1,28 @@
+name: Publish Firefox Addon (new version)
+
+on:
+  workflow_dispatch:
+  # push:
+  #   branches: [main]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: yayuyokitano/firefox-addon@v0
+        with:
+          api_key: ${{ secrets.FIREFOX_JWT_ISSUER }}
+          api_secret: ${{ secrets.FIREFOX_JWT_SECRET }}
+          guid: ${{ secrets.FIREFOX_EXTENSION_ID }}
+          xpi_path: brave-search-firefox.zip
+          # src_path: brave-search-src.zip # Optional
+          # src_path: firefox-brave-search # Optional
