@@ -6,14 +6,22 @@ on:
   #   branches: [main]
 
 jobs:
-  build:
+  publish:
     runs-on: ubuntu-latest
+    steps:
+      - uses: actions/upload-artifact@v4
+        with:
+          name: artifact
+          path: firefox-brave-search.zip
 
+  build:
+    needs: publish
+    runs-on: ubuntu-latest
     steps:
       - uses: wdzeng/firefox-addon@v1
         with:
           addon-guid: "{53c0f15a-a430-4d4f-ac91-caed0d516155}"
-          xpi-path: ./firefox-brave-search.zip
+          xpi-path: firefox-brave-search.zip
           self-hosted: false
           jwt-issuer: ${{ secrets.FIREFOX_JWT_ISSUER }}
           jwt-secret: ${{ secrets.FIREFOX_JWT_SECRET }}
