@@ -12,6 +12,7 @@
       "keyword": ["@brave", "@b", "!brave", "!b"]
     }
   },
+  "author": "semanticdata",
   "icons": {
     "96": "icons/96x96.png",
     "512": "icons/512x512.png"

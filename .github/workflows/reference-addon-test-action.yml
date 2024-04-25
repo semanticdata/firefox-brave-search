@@ -1,4 +1,4 @@
-name: Publish Firefox Add-on (Test Action)
+name: Reference Workflow (git archive)
 
 on:
   workflow_dispatch: # Trigger workflow manually

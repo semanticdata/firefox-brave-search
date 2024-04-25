@@ -1,4 +1,5 @@
 .gitattributes  export-ignore
 .github         export-ignore
 *.md            export-ignore
+*.png           export-ignore
 LICENSE         export-ignore

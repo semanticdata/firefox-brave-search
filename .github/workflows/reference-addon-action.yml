@@ -1,4 +1,4 @@
-name: Publish Firefox Add-on
+name: Reference Workflow (vimtor/action-zip)
 
 on:
   workflow_dispatch: # Trigger workflow manually
