@@ -15,6 +15,6 @@ jobs:
           # omitting it will create a new addon
           uuid: "{53c0f15a-a430-4d4f-ac91-caed0d516155}"
           xpi: build/my-addon.xpi
-          manifest: manifest.json
+          manifest: ./manifest.json
           api-key: ${{ secrets.FIREFOX_API_KEY }}
           api-secret: ${{ secrets.FIREFOX_API_SECRET }}
