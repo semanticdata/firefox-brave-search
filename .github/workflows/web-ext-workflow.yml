@@ -30,8 +30,8 @@ jobs:
         uses: kewisch/action-web-ext@v1
         with:
           cmd: sign
+          channel: listed
           source: ${{ steps.web-ext-build.outputs.target }}
-          # channel: unlisted
           apiKey: ${{ secrets.FIREFOX_JWT_ISSUER }}
           apiSecret: ${{ secrets.FIREFOX_JWT_SECRET }}
           # apiKey: ${{ secrets.AMO_SIGN_KEY }}
