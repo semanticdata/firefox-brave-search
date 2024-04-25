@@ -18,6 +18,6 @@ Firefox extension that adds Brave Search to Firefox and includes `@brave`, `!bra
 
 This extension is an independent project. It has no relation, and is not affiliated to Brave in any way. Brave™ is a registered trademark of Brave Software, Inc.
 
-## License
+## © License
 
 Source code in this repository is available under the [MIT License](LICENSE).
