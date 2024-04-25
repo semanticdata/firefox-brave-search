@@ -15,7 +15,7 @@ jobs:
           fetch-depth: 0 # Fetch all history for git info
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v4
+        uses: actions/upload-artifact@v4
         # with:
         #   path: artifact
 
