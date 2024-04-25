@@ -9,11 +9,13 @@ on:
 
 jobs:
   build:
-    name: "Build"
+    name: Build
     runs-on: ubuntu-latest
     steps:
-      - name: "Checkout"
-        uses: actions/checkout@v1 # v4
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: "web-ext build"
         id: web-ext-build
@@ -29,7 +31,7 @@ jobs:
         with:
           cmd: sign
           source: ${{ steps.web-ext-build.outputs.target }}
-          channel: unlisted
+          # channel: unlisted
           apiKey: ${{ secrets.FIREFOX_JWT_ISSUER }}
           apiSecret: ${{ secrets.FIREFOX_JWT_SECRET }}
           # apiKey: ${{ secrets.AMO_SIGN_KEY }}
