@@ -1,4 +1,4 @@
-name: "Build"
+name: "Release"
 
 on:
   workflow_dispatch:
@@ -13,19 +13,38 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: "Checkout"
-        uses: actions/checkout@v1
+        uses: actions/checkout@v1 # v4
 
       - name: "web-ext build"
         id: web-ext-build
         uses: kewisch/action-web-ext@v1
         with:
           cmd: build
-          # source: src
           filename: "{name}-{version}.xpi"
           ignoreFiles: '[ "package.json","package-lock.json","yarn.lock", ".github", ".gitattributes", "LICENSE", "README.md" ]'
 
-      - name: "Upload Artifact"
-        uses: actions/upload-artifact@v3
+      - name: "web-ext sign"
+        id: web-ext-sign
+        uses: kewisch/action-web-ext@v1
         with:
-          name: target.xpi
-          path: ${{ steps.web-ext-build.outputs.target }}
+          cmd: sign
+          source: ${{ steps.web-ext-build.outputs.target }}
+          channel: unlisted
+          apiKey: ${{ secrets.FIREFOX_JWT_ISSUER }}
+          apiSecret: ${{ secrets.FIREFOX_JWT_SECRET }}
+          # apiKey: ${{ secrets.AMO_SIGN_KEY }}
+          # apiSecret: ${{ secrets.AMO_SIGN_SECRET }}
+          timeout: 900000
+
+      # - name: "Upload Artifact"
+      #   uses: actions/upload-artifact@v3
+      #   with:
+      #     name: target.xpi
+      #     path: ${{ steps.web-ext-build.outputs.target }}
+
+      - name: "Create Release"
+        uses: softprops/action-gh-release@v1 # v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          files: ${{ steps.web-ext-sign.outputs.target }}

@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Brave Search Engine and Keywords",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "description": "Adds Brave Search to Firefox and includes @brave, !brave, @b, and !b as search keywords. This allows you to easily search brave in multiple new ways. Example: [!b !w Hello World] would let you search Wikipedia directly from any website regardless or wether or not you set Brave as your main search provider.",
   "chrome_settings_overrides": {
     "search_provider": {
