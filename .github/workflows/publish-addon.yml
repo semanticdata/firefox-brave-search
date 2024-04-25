@@ -9,7 +9,10 @@ jobs:
   publish:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/upload-artifact@v4
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
         with:
           name: artifact
           path: firefox-brave-search.zip
@@ -20,8 +23,9 @@ jobs:
     steps:
       - uses: wdzeng/firefox-addon@v1
         with:
-          addon-guid: "{53c0f15a-a430-4d4f-ac91-caed0d516155}"
+          # addon-guid: "{53c0f15a-a430-4d4f-ac91-caed0d516155}"
           xpi-path: firefox-brave-search.zip
           self-hosted: false
+          addon-guid: ${{ secrets.FIREFOX_EXTENSION_ID }}
           jwt-issuer: ${{ secrets.FIREFOX_JWT_ISSUER }}
           jwt-secret: ${{ secrets.FIREFOX_JWT_SECRET }}
