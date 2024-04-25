@@ -1,4 +1,4 @@
-name: Publish Firefox Addon (yayuyokitano/firefox-addon)
+name: Publish Firefox Add-on
 
 on:
   workflow_dispatch: # Trigger workflow manually
@@ -12,22 +12,18 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0
+          fetch-depth: 0 # Fetch all history for git info
       - name: Zip files
         uses: vimtor/action-zip@v1.2
         with:
           files: manifest.json icons/
-          recursive: false
-          dest: result.zip
-      # - name: Upload artifact
-      #   uses: actions/upload-artifact@v4
-      #   with:
-      #     path: result.zip
+          recursive: false # Keep the directory structure
+          dest: firefox-brave-search.zip
       - name: Publish
         uses: yayuyokitano/firefox-addon@v0.0.6-alpha
         with:
-          api_key: ${{ secrets.FIREFOX_JWT_ISSUER }}
+          api_key: ${{ secrets.FIREFOX_JWT_ISSUER }} #
           api_secret: ${{ secrets.FIREFOX_JWT_SECRET }}
           guid: ${{ secrets.FIREFOX_EXTENSION_ID }}
-          xpi_path: result.zip
+          xpi_path: firefox-brave-search.zip
           # src_path: firefox-brave-search-src.zip # Optional
