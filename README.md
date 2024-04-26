@@ -18,9 +18,9 @@ Firefox extension that adds Brave Search to Firefox and includes `@brave`, `!bra
 
 This extension is an independent project. It has no relation, and is not affiliated to Brave in any way. Brave™ is a registered trademark of Brave Software, Inc.
 
-After some research, it appears Mozilla has placed limitations on using <code>chrome_settings_overrides<code> on Android. This is necessary to assign a new search engine under the platform.
+After some research, it appears Mozilla has placed limitations on using `chrome_settings_overrides` on Android. This is necessary to assign a new search engine under the platform.
 
-<a href="https://extensionworkshop.com/documentation/develop/differences-between-desktop-and-android-extensions/">Read more</a> about these limitations.
+[Read more](https://extensionworkshop.com/documentation/develop/differences-between-desktop-and-android-extensions) about these limitations.
 
 ## © License
 
