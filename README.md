@@ -15,7 +15,7 @@ Firefox extension that adds Brave Search to Firefox and includes `@brave`, `!bra
 - `!b !w Hello World` would let you search Wikipedia directly from any website regardless or wether or not you set Brave as your default search provider.
 - `!gh Zola themes` would let you search GitHub directly while having this extension enabled.
 
-## Disclaimers
+## ⚠ Disclaimers
 
 This extension is an independent project. It has no relation, and is not affiliated to Brave in any way. Brave™ is a registered trademark of Brave Software, Inc.
 
