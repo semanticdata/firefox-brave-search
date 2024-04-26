@@ -8,6 +8,8 @@
 
 Firefox extension that adds Brave Search to Firefox and includes `@brave`, `!brave`, `@b`, and `!b` as search keywords. This allows you to easily search brave in multiple new ways.
 
+[![Get the Addon](https://raw.githubusercontent.com/semanticdata/text-revealer-firefox-extension/master/firefox.png)](https://addons.mozilla.org/en-US/firefox/addon/brave-search-and-keyword/)
+
 ### Examples
 
 - `!b !w Hello World` would let you search Wikipedia directly from any website regardless or wether or not you set Brave as your default search provider.
