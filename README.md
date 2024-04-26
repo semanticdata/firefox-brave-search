@@ -10,7 +10,7 @@ Firefox extension that adds Brave Search to Firefox and includes `@brave`, `!bra
 
 [![Get the Addon](https://raw.githubusercontent.com/semanticdata/text-revealer-firefox-extension/master/firefox.png)](https://addons.mozilla.org/en-US/firefox/addon/brave-search-and-keyword/)
 
-## Examples
+## Usage
 
 - `!b !w Hello World` would let you search Wikipedia directly from any website regardless or wether or not you set Brave as your default search provider.
 - `!gh Zola themes` would let you search GitHub directly while having this extension enabled.
