@@ -1,5 +1,4 @@
-<h1><img alt="Brave logo" src="icons/96x96.png" width="28" />
-Brave Search Engine and Keywords</h1>
+# ![Brave logo](icons/96x96.png) Brave Search Engine and Keywords
 
 ![Mozilla Add-on Version](https://img.shields.io/amo/v/%7B53c0f15a-a430-4d4f-ac91-caed0d516155%7D)
 ![Mozilla Add-on Rating](https://img.shields.io/amo/rating/%7B53c0f15a-a430-4d4f-ac91-caed0d516155%7D)
